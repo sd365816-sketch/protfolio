@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+
+/* ===== Animated Background ===== */
+
+body {
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    background-size: 400% 400%;
+    animation: bgAnim 18s ease infinite;
+    color: #fff;
+}
+
+@keyframes bgAnim {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* ===== Profile Card ===== */
+
+.profile-card {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa");
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .7);
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* ===== Profile Image ===== */
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border-radius: 50%;
+    border: 6px solid #1dd1a1;
+    overflow: hidden;
+    animation: pulse 2.5s infinite;
+    box-shadow: 0 0 25px rgba(29, 209, 161, .6);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 15px rgba(29, 209, 161, .4);
+    }
+    50% {
+        box-shadow: 0 0 35px rgba(29, 209, 161, .9);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(29, 209, 161, .4);
+    }
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .6s;
+}
+
+.profile-img:hover img {
+    transform: scale(1.15) rotate(4deg);
+}
+
+
+/* ===== Social Icons ===== */
+
+.social-icons a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .15);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #1dd1a1;
+    text-decoration: none;
+    margin: 0 6px;
+    transition: .4s;
+}
+
+.social-icons a:hover {
+    background: #1dd1a1;
+    color: #000;
+    transform: translateY(-6px) scale(1.2);
+}
+
+
+/* ===== Section ===== */
+
+.section {
+    background: rgba(27, 34, 44, .9);
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .5);
+    animation: fadeUp 1.3s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ===== Interests ===== */
+
+.interests-grid div {
+    background: #2a323e;
+    padding: 15px;
+    border-radius: 15px;
+    transition: .4s;
+}
+
+.interests-grid div:hover {
+    background: #1dd1a1;
+    color: #000;
+    transform: scale(1.15) rotate(2deg);
+}
+
+
+/* ===== Button ===== */
+
+.btn-custom {
+    border: 2px solid #1dd1a1;
+    color: #1dd1a1;
+    border-radius: 30px;
+    padding: 12px 35px;
+    transition: .4s;
+}
+
+.btn-custom:hover {
+    background: #1dd1a1;
+    color: #000;
+    transform: translateY(-4px);
+}
+
+
+/* ===== Skills ===== */
+
+.progress {
+    height: 10px;
+    background: #2a323e;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.progress span {
+    height: 100%;
+    display: block;
+    background: linear-gradient(90deg, #1dd1a1, #48dbfb);
+    animation: fill 2s ease forwards;
+}
+
+@keyframes fill {
+    from {
+        width: 0;
+    }
+}
+
+
+/* ===== Responsive ===== */
+
+@media(max-width:768px) {
+    .profile-img {
+        width: 160px;
+        height: 160px;
+    }
+}
